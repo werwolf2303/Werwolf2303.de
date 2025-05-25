@@ -8,7 +8,7 @@ import {Cache} from "./cache";
 
 // Hack for avoiding page init for webamp popout
 if(!window.bypassInit) {
-    window.DEBUG_MODE = true;
+    window.DEBUG_MODE = false;
 
     window.onerror = function(msg, url, line, col, error) {
         const error_container = document.createElement("div");
