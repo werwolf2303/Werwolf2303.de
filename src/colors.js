@@ -1,0 +1,9 @@
+export var COLOR_1 = "#004E64";
+export var COLOR_2 = "#b02edf";
+export var COLOR_3 = "#9FFFCB";
+export var COLOR_4 = "#25A18E";
+export var COLOR_5 = "rgba(114,181,156,0.42)";
+export var COLOR_6 = "#E8E1EF";
+export var COLOR_7 = "#1c4060";
+export var COLOR_8 = "#517d87";
+export var COLOR_8_SEMI_TRANSPARENT = "rgba(81, 125, 132, 0.3)";
