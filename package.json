@@ -1,0 +1,19 @@
+{
+  "name": "werwolf2303.de",
+  "version": "2.0.0",
+  "description": "",
+  "homepage": "https://github.com/werwolf2303/Werwolf2303.de#readme",
+  "bugs": {
+    "url": "https://github.com/werwolf2303/Werwolf2303.de/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/werwolf2303/Werwolf2303.de.git"
+  },
+  "license": "ISC",
+  "author": "Werwolf2303",
+  "type": "commonjs",
+  "scripts": {
+    "start": "python3 server.py"
+  }
+}

@@ -1,0 +1,13 @@
+<ui-view controller="controllers/SkinMuseum.controller.mjs">
+  <ui-app-bar style="position: sticky; top: 2.65rem;">
+    <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem;">
+      <button id="closeSkinMuseum" is="ui-button">Close Museum</button>
+      <button style="display: none" id="closeSearchSkinMuseum" is="ui-button"><- Back</button>
+      <a style="font-weight: bold; font-size: 1rem">SkinMuseum Search</a>
+      <input id="skinMuseumSearchText" type="text">
+      <button id="skinMuseumSearchButton" is="ui-button">Search</button>
+    </div>
+  </ui-app-bar>
+  <div id="skinMuseumsContainer" style="width: inherit; height: inherit; display: block">
+  </div>
+</ui-view>

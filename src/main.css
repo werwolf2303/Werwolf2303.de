@@ -1,0 +1,119 @@
+body {
+    user-select: none;
+}
+
+iframe {
+    width: 20rem;
+    height: 15rem;
+
+    border: none;
+    overflow: hidden;
+}
+
+/* ── Nav bar ─────────────────────────────────────── */
+
+.nav-brand {
+    font-weight: 600;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+.nav-desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 0.25rem;
+    transition: color 200ms;
+}
+
+.nav-link:hover {
+    color: var(--midnight-accent);
+}
+
+.nav-link.nav-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: var(--midnight-accent);
+    border-radius: 1px;
+}
+
+/* ── Responsive breakpoint ───────────────────────── */
+
+@media (max-width: 600px) {
+    .nav-desktop {
+        display: none;
+    }
+}
+
+#readme {
+    margin-left: 0.5rem;
+}
+
+#projectsHeader {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#projectsDescription {
+    color: var(--midnight-foreground-muted);
+    font-size: 0.95rem;
+}
+
+#toolsDesktop {
+    padding: 1rem 0.5rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+#toolsDesktop div {
+    cursor: pointer;
+}
+
+ui-view {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.skinMuseumSkinsContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skinMuseumSkin {
+    cursor: pointer;
+}
+
+input {
+    background-color: var(--midnight-surface-raised);
+    border: 1px solid var(--midnight-border);
+    color: var(--midnight-foreground);
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    border-radius: 0.35rem;
+    outline: none;
+    transition: border-color 200ms;
+}
+
+input:focus {
+    border-color: var(--midnight-accent);
+}
+
+input::placeholder {
+    color: var(--midnight-foreground-muted);
+}

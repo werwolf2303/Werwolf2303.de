@@ -1,0 +1,14 @@
+{
+  "theme": "AI_Midnight",
+  "navigation": {
+    "placeAt": "content",
+    "view": "App.view.html",
+    "viewsPath": "views",
+    "views": [
+      "Home",
+      "Projects",
+      "Tools",
+      "SkinMuseum"
+    ]
+  }
+}

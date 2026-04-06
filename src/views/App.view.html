@@ -1,0 +1,18 @@
+<ui-view controller="controllers/App.controller.mjs">
+  <ui-div layout="BorderLayout">
+    <ui-app-bar style="position: sticky; top: 0; z-index: 100; justify-content: flex-start; gap: 1.5rem" position="north">
+      <a class="nav-brand">Werwolf2303.de</a>
+      <nav id="navLinks" class="nav-desktop">
+        <a id="homeNavigation" class="nav-link">Home</a>
+        <a id="projectsNavigation" class="nav-link">Projects</a>
+        <a id="toolsNavigation" class="nav-link">Tools</a>
+      </nav>
+      <ui-hamburger-button id="navHamburger">
+        <a id="homeNavigationMobile">Home</a>
+        <a id="projectsNavigationMobile">Projects</a>
+        <a id="toolsNavigationMobile">Tools</a>
+      </ui-hamburger-button>
+    </ui-app-bar>
+    <ui-navigator position="center" style="overflow: visible;"></ui-navigator>
+  </ui-div>
+</ui-view>
