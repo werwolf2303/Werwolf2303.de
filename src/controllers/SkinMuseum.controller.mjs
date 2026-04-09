@@ -199,6 +199,7 @@ export default async(context) => {
             controllerContext.view.getElementById("closeSkinMuseum").addEventListener("click", () => {
                 document.querySelector(".skinMuseumNavigator").style.display = "none";
                 document.getElementById("toolsDesktop").style.display = "flex";
+                document.getElementById("footer").style.display = "flex";
             });
 
             controllerContext.view.getElementById("skinMuseumSearchButton").addEventListener("click", () => {

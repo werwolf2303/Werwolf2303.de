@@ -1,17 +1,8 @@
 export default async(context) => {
     function saveNavigationState(viewName) {
+        if (viewName === "Impressum") return;
+
         localStorage.setItem("navigationState", viewName);
-    }
-
-    function loadNavigationState(controllerContext) {
-        if (!localStorage.getItem("navigationState")) {
-            return false;
-        }
-
-        const viewName = localStorage.getItem("navigationState");
-        controllerContext.view.querySelector("ui-navigator").navigateTo(viewName);
-
-        return true;
     }
 
     function setActiveLink(viewName, controllerContext) {
@@ -35,7 +26,7 @@ export default async(context) => {
         const mobileIdMap = {
             "Home": "homeNavigationMobile",
             "Projects": "projectsNavigationMobile",
-            "Tools": "toolsNavigationMobileMobile",
+            "Tools": "toolsNavigationMobile",
         };
 
         const hamburger = controllerContext.view.getElementById("navHamburger");
@@ -45,13 +36,16 @@ export default async(context) => {
         }
     }
 
-    function navigateTo(viewName, controllerContext) {
-        controllerContext.view.querySelector("ui-navigator").navigateTo(viewName);
+    async function navigateTo(viewName, controllerContext) {
+        controllerContext.view.getElementById("header").style.userSelect = "none";
+        await controllerContext.view.querySelector("ui-navigator").navigateTo(viewName);
         saveNavigationState(viewName);
         setActiveLink(viewName, controllerContext);
 
         const hamburger = controllerContext.view.getElementById("navHamburger");
         if (hamburger.open.get()) hamburger.open.set(false);
+
+        controllerContext.view.getElementById("header").style.userSelect = "auto";
     }
 
     return {
@@ -82,10 +76,14 @@ export default async(context) => {
                 navigateTo("Tools", controllerContext);
             });
 
+            controllerContext.view.getElementById("impressumNavigation").addEventListener("click", () => {
+                navigateTo("Impressum", controllerContext);
+            });
+
             // Set initial active state
             const saved = localStorage.getItem("navigationState") || "Home";
             setActiveLink(saved, controllerContext);
-            loadNavigationState(controllerContext);
+            controllerContext.view.querySelector("ui-navigator").navigateTo(saved);
         }
     }
 }

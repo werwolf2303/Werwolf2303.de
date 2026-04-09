@@ -77,6 +77,8 @@ export default async(context) => {
                 controllerContext.view.getElementById("toolsDesktop").style.display = "none";
                 controllerContext.view.querySelector(".skinMuseumNavigator").style.display = "block";
                 controllerContext.view.querySelector(".skinMuseumNavigator").navigateTo("SkinMuseum");
+
+                document.getElementById("footer").style.display = "none";
             });
         }
     }
