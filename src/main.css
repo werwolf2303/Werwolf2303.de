@@ -82,11 +82,6 @@ iframe {
     cursor: pointer;
 }
 
-ui-view {
-    width: 100% !important;
-    height: 100% !important;
-}
-
 .skinMuseumSkinsContainer {
     display: flex;
     align-items: center;
@@ -116,4 +111,9 @@ input:focus {
 
 input::placeholder {
     color: var(--midnight-foreground-muted);
+}
+
+#footer {
+    bottom: 0;
+    position: sticky;
 }

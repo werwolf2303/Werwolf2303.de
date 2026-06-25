@@ -1,6 +1,6 @@
 <ui-view style="display: flex; flex-direction: column" controller="controllers/App.controller.mjs">
-  <ui-div style="flex: 1" layout="BorderLayout">
-    <ui-app-bar id="header" style="position: sticky; top: 0; z-index: 100; justify-content: flex-start; gap: 1.5rem" position="north">
+  <div style="flex: 1; display: flex; flex-direction: column">
+    <ui-app-bar id="header" style="position: sticky; top: 0; z-index: 100; justify-content: flex-start; gap: 1.5rem">
       <a class="nav-brand">Werwolf2303.de</a>
       <nav id="navLinks" class="nav-desktop">
         <a id="homeNavigation" class="nav-link">Home</a>
@@ -13,9 +13,9 @@
         <a id="toolsNavigationMobile">Tools</a>
       </ui-hamburger-button>
     </ui-app-bar>
-    <ui-navigator position="center" style="overflow: visible;"></ui-navigator>
-  </ui-div>
-  <ui-app-bar id="footer" style="text-align: center; font-size: 0.85rem;">
-    <a id="impressumNavigation" style="cursor: pointer;">Impressum</a>
-  </ui-app-bar>
+    <ui-navigator style="overflow: visible; flex: 1"></ui-navigator>
+    <ui-app-bar id="footer" style="text-align: center; font-size: 0.85rem;">
+      <a id="impressumNavigation" style="cursor: pointer;">Impressum</a>
+    </ui-app-bar>
+  </div>
 </ui-view>
